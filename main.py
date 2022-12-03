@@ -41,7 +41,7 @@ logger = logging.getLogger()
 
 os.makedirs("./downloads", exist_ok=True)
 
-@bot.on_message(filters.command(["start"])& ~filters.edited)
+@bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Hello im txt file downloader\nPress **/pyro** to download links listed in a txt file in the format **Name:link**\nBot made by ACE")
     
