@@ -124,7 +124,7 @@ async def account_login(bot: Client, m: Message):
 
             Show = f"**Downloading:-**\n\n**Name :-** ```{name}\nQuality - {raw_text2}```\n\n**Url :-** ```{url}```"
             prog = await m.reply_text(Show)
-            cc = f'>> **Name :** {name}\n>> **Title :** {raw_text0}\n\n>> **Index :** {count}'
+            cc = f'>> **Name :(**{count}**)=>**{name}\n>> **Title :** {raw_text0}\n>> **Downloaded by :𝓜𝓾𝓷𝓷𝓪 𝓫𝓱𝓪𝓲𝔂𝓪** '
 
             if "youtu" in url:
                 if raw_text2 in ["144", "240", "480"]:
