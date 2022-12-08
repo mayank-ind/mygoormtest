@@ -122,9 +122,9 @@ async def account_login(bot: Client, m: Message):
             name = links[i][0].replace("\t", "")
                 # await m.reply_text(name +":"+ url)
 
-            Show = f"**Downloading:-**\n\n**Name :-** ```{name}\nQuality - {raw_text2}```\n\n**Url :-** ```{url}```"
+            Show = f"**Downloading:-**\n\n**Name :-** ```{name}\nQuality - {raw_text2}```\n\n**Url :-** {url}"
             prog = await m.reply_text(Show)
-            cc = f'>> **Name :(**{count}**)=>**{name}\n>> **Title :** {raw_text0}\n>> **Downloaded by :𝓜𝓾𝓷𝓷𝓪 𝓫𝓱𝓪𝓲𝔂𝓪** '
+            cc = f'>>**(**{count}**)=>**{name}\n>> **Batch :** {raw_text0}\n>> **Downloaded by :𝓜𝓾𝓷𝓷𝓪 𝓫𝓱𝓪𝓲𝔂𝓪** '
 
             if "youtu" in url:
                 if raw_text2 in ["144", "240", "480"]:
@@ -212,7 +212,7 @@ async def account_login(bot: Client, m: Message):
                         await reply.delete (True)
                         time.sleep(1)
                     except Exception as e:
-                        await m.reply_text(f"**downloading failed ❌**\n{str(e)}\n**Name** - {name}\n**Link** - ```{url}```")
+                        await m.reply_text(f"**downloading failed ❌**\n{str(e)}\n**Name** - {name}\n**Link** - {url}")
                         continue
             except Exception as e:
                 await m.reply_text(str(e))
